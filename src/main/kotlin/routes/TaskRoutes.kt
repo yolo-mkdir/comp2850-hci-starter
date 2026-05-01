@@ -121,11 +121,11 @@ fun Route.taskRoutes() {
                     """
                     <li id="task-${task.id}">
                         <span>${task.title}</span>
-                        <form action="/tasks/${task.id}/delete" method="post" style="display: inline;"
+                        <form action="/tasks/${task.id}/delete" method="post" class="delete-form"
                               hx-post="/tasks/${task.id}/delete"
                               hx-target="#task-${task.id}"
                               hx-swap="outerHTML">
-                            <button type="submit" aria-label="Delete task: ${task.title}">Delete</button>
+                            <button type="submit" class="delete-button" aria-label="Delete task: ${task.title}">Delete</button>
                         </form>
                     </li>
                     """.trimIndent()
